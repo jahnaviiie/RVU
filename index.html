@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jahnavi - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-eGFqLJHz5XfuY4aHAfxj3KMVA5Tn1dUeKw5H+RE02lW3g4qizlsvEddizP3ifdj2" crossorigin="anonymous">
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+            // Smooth scrolling for navigation links
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                link.addEventListener('click', smoothScroll);
+            });
+
+            function smoothScroll(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - document.querySelector('header').offsetHeight, // Adjusted for header height
+                    behavior: 'smooth'
+                });
+            }
+
+            // Toggle mobile navigation menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const navList = document.querySelector('nav ul');
+
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+            function toggleMobileMenu() {
+                navList.classList.toggle('show');
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Jahnavi Gangadharam</h1>
+            <p>Web Design Enthusiast</p>
+        </div>
+    </header>
+
+    <nav>
+<button id="mobile-menu-button"><i class="fas fa-bars"></i></button>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="photo">
+        <h2></h2>
+        <div class="profile-picture">
+            <img src="pfp.jpg" >
+        </div>
+    </section>
+    
+    <div class="main-content">
+        <section id="about" class="content-box">
+            <h2>About Me</h2>
+            <p>
+                
+                Hello! I'm Jahnavi Gangadharam, a passionate first-year student at RV University, diving into the exciting world of web design. As a budding enthusiast in this field, I am eager to explore the realms of creativity and innovation. My journey in web design is fueled by a genuine curiosity to craft visually appealing and user-friendly websites.
+                Being in my first year at RV University, I am absorbing knowledge from various courses, gaining insights into web development, UI/UX design, and front-end technologies. My academic journey is complemented by hands-on experiences and a commitment to continuous learning.
+                Join me on this exhilarating journey as I embark on the path of web design, fueled by passion, creativity, and a relentless pursuit of knowledge. Let's create something extraordinary together!
+        </p>
+        </section>
+
+        <section id="education" class="content-box">
+            <h2>Education</h2>
+            <p><strong>RV University (2023)</strong><br>
+                First Year - Bachelor of [Btech Hons CSE]<br>
+            Relevant Coursework: Web Development, UI/UX Design, Front-end Technologies</p>
+        
+            <p><strong>Vedantha College (2023)</strong><br>
+                Higher Secondary (12th Grade)</p>
+
+                <p><strong>Bethesda International School (2021)</strong><br>
+                    Secondary School (10th Grade)</p>
+        </section>
+        
+        <section id="experience" class="content-box">
+            <h2>Experience</h2>
+            <p><strong>Volunteering Intern</strong><br>
+            Mindler, June 2022 - August 2022<br>
+            Assisted in the development of responsive and visually appealing websites. Collaborated with the design team to implement user interface improvements and conducted usability testing.</p>
+        </section>
+        
+        <section id="skills" class="content-box">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>Responsive Web Design</li>
+                <li>UI/UX Design</li>
+                <li>Effective Communication</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="content-box">
+            <h2>Projects</h2>
+            <p><strong>Portfolio Website</strong><br>
+            Developed a personal portfolio website showcasing my skills and projects. Implemented responsive design and interactive elements using HTML, CSS, and JavaScript.</p>
+        
+            <p><strong>E-commerce Redesign</strong><br>
+            Collaborated with a team to redesign the user interface of an e-commerce website. Utilized UX principles and implemented improvements to enhance the overall user experience.</p>
+        </section>
+        
+        <section id="contact" class="content-box">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>Email: <a href="mailto:jahnavig@gmail.com">jahnavi.btech23@rvu.edu.in</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/jjahnavig" target="_blank">LinkedIn Profile</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Jahnavi. All rights reserved.</p>
+    </footer>
+</body> 
+</html>
